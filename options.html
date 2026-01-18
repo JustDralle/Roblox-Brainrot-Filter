@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Roblox Brainrot Filter - Options</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; margin: 24px; max-width: 900px; }
+    .card { border: 1px solid #ddd; border-radius: 14px; padding: 18px; background: #fff; }
+    h1 { font-size: 20px; margin: 0 0 12px; }
+    p { color: #444; margin: 8px 0 16px; }
+    textarea { width: 100%; min-height: 220px; resize: vertical; padding: 12px; border-radius: 12px; border: 1px solid #ccc; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: 13px; }
+    .row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-top: 14px; }
+    label { display: inline-flex; gap: 8px; align-items: center; user-select: none; }
+    button { padding: 10px 14px; border-radius: 12px; border: 1px solid #ccc; background: #f6f6f6; cursor: pointer; }
+    button:hover { background: #efefef; }
+    .hint { font-size: 13px; color: #555; }
+    .status { margin-left: auto; font-size: 13px; color: #0a6; }
+    .danger { color: #b00; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Roblox Brainrot Filter</h1>
+    <p>One keyword per line. If the title of a game contains one of your word, it's gonna get hidden/greyed out</p>
+
+    <textarea id="keywords"></textarea>
+
+    <div class="row">
+      <label>
+        <input type="checkbox" id="dimInsteadOfHide" />
+        grey out
+      </label>
+
+      <label>
+        <input type="checkbox" id="matchCreatorToo" />
+        Match creator name
+      </label>
+
+      <button id="save">save</button>
+      <button id="defaults">Set defaults keywords</button>
+      <button id="clear" class="danger">clear</button>
+
+      <span id="status" class="status"></span>
+    </div>
+
+    <p class="hint">
+      Advice : use framgents, not a whole sentence. Exemple: <code>skibidi</code>, <code>sigma</code>, <code>rizz</code>, <code>toilet</code>, <code>brainrot</code>…
+      You can put groups/community name too if you don't know what to filter.
+    </p>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

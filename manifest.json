@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Roblox Brainrot Filter",
+  "version": "1.1.0",
+  "description": "Hide roblox game based on a keyword list set by user. (anti-brainrot).",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.roblox.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.roblox.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Roblox Brainrot Filter",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+    "icons": {
+    "128": "icon128.png"
+  }
+}
